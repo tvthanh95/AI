@@ -169,6 +169,17 @@ def result_string(assignment):
     for var in sorted(assignment.keys()):
         st += str(assignment[var])
     return st
+"""
+How to use:
+python3 csp.py <input_string>
+<input_string>: represent a sudoku board, this string should contain 81 characters. 0
+indicate unassigned value.
+Example: python3 csp.py 500068000000000060042050000000800900001000040903000620700001009004200003080000000
+output: this program will create a file which is named "output.txt", this file will contain the solution and the method
+which we use to solve it.
+PS:This is very simple sudoku solver and I don't use any specific algorithm to solve it, just use the backtracking for a CSP
+problem
+"""
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         sudoku = SudokuCSP(sys.argv[1])
